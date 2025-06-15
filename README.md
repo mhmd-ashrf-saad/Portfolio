@@ -52,12 +52,3 @@ Feel free to use, modify, or share!
 ---
 
 > Made with ❤️ using Angular
-
-```
-
-Let me know if you'd like:
-- A dark theme badge
-- GitHub Stats section
-- Blog or resume integration section
-- Deployment steps (e.g. with Firebase or GitHub Pages)
-```
