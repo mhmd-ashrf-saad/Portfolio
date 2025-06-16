@@ -28,7 +28,12 @@ i {
   font-size: 1.2rem;
   margin-right: 15px;
 }
-
+.custom-border {
+  border-bottom: 2px solid var(--greyline);
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 0.3rem;
+}
 @media (max-width: 576px) {
   nav {
     padding-right: 1.5rem;
@@ -68,11 +73,5 @@ i {
   }
   .navbar-collapse {
     display: flex;
-    gap: 16px;
   }
-}
-.custom-border {
-  border-bottom: 2px solid var(--greyline);
-  width: 80%;
-  margin: 0 auto;
 }
