@@ -1,16 +1,13 @@
 footer {
   display: flex;
   flex-direction: column;
-  margin-top: 1.5rem;
   padding-top: 1.5rem;
   height: 11.375rem;
   background-color: var(--dark);
   gap: 1.5rem;
   align-items: center;
 }
-.custom-border {
-  margin-top: 4rem;
-}
+
 .media {
   display: flex;
   justify-content: center;
