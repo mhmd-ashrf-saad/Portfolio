@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -8,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class Home {
 
+  constructor(@Inject(DOCUMENT) private document: Document) {}
+
+  downloadCV() {
+    const link = this.document.createElement('a');
+    link.href = 'assets/mohamed-ashraf-cv.pdf';
+    link.download = 'Mohamed_Ashraf_CV.pdf';
+    link.target = '_blank';
+    this.document.body.appendChild(link);
+    link.click();
+    this.document.body.removeChild(link);
+  }
 }

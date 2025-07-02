@@ -1,0 +1,93 @@
+<div class="container">
+  <div class="title">
+    <div class="inner-title">Projects</div>
+    <svg xmlns="http://www.w3.org/2000/svg" width="194" height="12" viewBox="0 0 194 12" fill="none">
+      <path d="M0.166667 6C0.166667 8.94552 2.55448 11.3333 5.5 11.3333C8.44552 11.3333 10.8333 8.94552 10.8333 6C10.8333 3.05448 8.44552 0.666667 5.5 0.666667C2.55448 0.666667 0.166667 3.05448 0.166667 6ZM183.167 6C183.167 8.94552 185.554 11.3333 188.5 11.3333C191.446 11.3333 193.833 8.94552 193.833 6C193.833 3.05448 191.446 0.666667 188.5 0.666667C185.554 0.666667 183.167 3.05448 183.167 6ZM5.5 6V7H188.5V6V5H5.5V6Z" fill="#12F7D6"/>
+    </svg>
+    <div class="description">I had the pleasure of working with<br> these awesome projects</div>
+  </div>
+
+  <div class="slider-container">
+    <button class="nav-btn prev" (click)="prevSlide()" [disabled]="currentSlide === 0">
+      <i class="bi bi-chevron-left"></i>
+    </button>
+
+    <div class="slider"
+         [style.transform]="'translateX(-' + (currentSlide * 100) + '%)'">
+      <div class="slide" *ngFor="let project of projects; let i = index">
+        <div class="project-showcase">
+          <!-- Code Editor Side -->
+          <div class="code-side">
+            <div class="code-editor">
+              <div class="editor-header">
+                <div class="editor-dots">
+                  <span class="dot red"></span>
+                  <span class="dot yellow"></span>
+                  <span class="dot green"></span>
+                </div>
+                <div class="editor-title">{{ project.title }}.html</div>
+              </div>
+              <div class="code-content">
+                <img [src]="project.codeImage" [alt]="project.title + ' code'" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Website Preview Side -->
+          <div class="preview-side">
+            <div class="browser-mockup">
+              <div class="browser-header">
+                <div class="browser-dots">
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <div class="url-bar">{{ project.liveUrl }}</div>
+              </div>
+              <div class="browser-content">
+                <img [src]="project.image" [alt]="project.title" />
+              </div>
+            </div>
+
+            <!-- View Website Button -->
+            <div class="project-actions">
+              <a [href]="project.liveUrl" target="_blank" class="view-website-btn">
+                View Website
+                <i class="bi bi-arrow-up-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Info -->
+        <div class="project-info">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.description }}</p>
+          <div class="technologies">
+            <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+          </div>
+          <div class="project-links">
+            <a [href]="project.liveUrl" target="_blank" class="btn btn-primary">Live Demo</a>
+            <a [href]="project.githubUrl" target="_blank" class="btn btn-secondary">
+              <i class="bi bi-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="nav-btn next" (click)="nextSlide()" [disabled]="currentSlide === projects.length - 1">
+      <i class="bi bi-chevron-right"></i>
+    </button>
+  </div>
+
+  <!-- Slide Indicators -->
+  <div class="slide-indicators">
+    <button
+      *ngFor="let project of projects; let i = index"
+      class="indicator"
+      [class.active]="i === currentSlide"
+      (click)="goToSlide(i)">
+    </button>
+  </div>
+</div>

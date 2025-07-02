@@ -20,9 +20,9 @@ export const routes: Routes = [{
     },
 },
 {
-    path: 'albums',
+    path: 'projects',
     loadComponent: () => {
-        return import('./albums/albums').then((m) => m.Albums)
+        return import('./projects/projects').then((m) => m.Projects)
     },
 },
 ];
