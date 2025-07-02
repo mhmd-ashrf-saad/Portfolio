@@ -14,7 +14,7 @@
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, #12F7D6, #ffffff);
+  background: var(--active);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -45,7 +45,7 @@
   padding: 2rem;
   background: #2a2a2a;
   border-radius: 20px;
-  margin-right: 2rem;
+
 }
 
 .project-showcase {
@@ -57,6 +57,7 @@
 
 .code-side {
   flex: 1;
+  display: none;
 }
 
 .code-editor {
@@ -231,6 +232,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  background-color: var(--active);
 }
 
 .btn-primary {
@@ -319,3 +321,4 @@
     padding: 1rem;
   }
 }
+
