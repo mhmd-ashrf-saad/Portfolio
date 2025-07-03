@@ -6,7 +6,6 @@ interface Project {
   title: string;
   description: string;
   image: string;
-  codeImage: string;
   technologies: string[];
   liveUrl: string;
   githubUrl: string;
@@ -36,34 +35,24 @@ export class Projects implements OnInit, OnDestroy {
   projects: Project[] = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      description: "A modern e-commerce platform built with Angular and Firebase. Features include user authentication, product catalog, shopping cart, and payment integration.",
-      image: "assets/projects/ecommerce-preview.jpg",
-      codeImage: "assets/projects/ecommerce-code.jpg",
-      technologies: ["Angular", "TypeScript", "Firebase", "Stripe"],
-      liveUrl: "https://your-ecommerce-demo.com",
-      githubUrl: "https://github.com/yourusername/ecommerce-project"
+      title: "Tarabiza",
+      description: "Developed a furniture website, Designed and implemented responsive user interfaces using HTML, CSS, and JavaScript, Built robust server-side functionality using Django and integrated PostgreSQL for database\n" +
+        "management",
+      image: "projects/tarabiza.jpg",
+      technologies: ["Django", "JavaScript", "PostgreSQL", "Bootstrap"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/mohamednnj/ITI-projcet"
     },
     {
       id: 2,
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "assets/projects/taskapp-preview.jpg",
-      codeImage: "assets/projects/taskapp-code.jpg",
-      technologies: ["Angular", "Node.js", "Socket.io", "MongoDB"],
-      liveUrl: "https://your-taskapp-demo.com",
-      githubUrl: "https://github.com/yourusername/task-management"
+      title: "U-learning",
+      description: "user-friendly educational platform, front-end implemented using HTML5, CSS3, JavaScript, TypeScript, Angular (for dynamic UI components, routing, and reactive forms),\n" +
+        "Bootstrap (for responsive design and styling), Angular Material (for modern UI elements)",
+      image: "projects/ulearning.png",
+      technologies: ["Angular", "Angular Material", "MongoDB","Bootstrap"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/mhmd-ashrf-saad/U-LearningDotNetEntityFramework"
     },
-    {
-      id: 3,
-      title: "Weather Dashboard",
-      description: "A responsive weather dashboard that displays current conditions, forecasts, and interactive maps using multiple weather APIs.",
-      image: "assets/projects/weather-preview.jpg",
-      codeImage: "assets/projects/weather-code.jpg",
-      technologies: ["Angular", "OpenWeather API", "Chart.js", "PWA"],
-      liveUrl: "https://your-weather-demo.com",
-      githubUrl: "https://github.com/yourusername/weather-dashboard"
-    }
   ];
 
   ngOnInit() {
