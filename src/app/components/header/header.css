@@ -2,14 +2,13 @@
   flex-grow: 0;
   gap: 1rem;
 }
-.brand{
-  a{
-    margin:0;
+.brand {
+  a {
+    margin: 0;
   }
 }
 img {
   width: 3rem;
-
 }
 
 .container-fluid {
@@ -19,7 +18,8 @@ img {
 nav {
   background-color: var(--primary) !important;
   height: 3.7rem;
-  justify-content: space-around;}
+  justify-content: space-around;
+}
 
 i {
   span {
@@ -42,6 +42,91 @@ i {
   margin: 0.3rem auto 0;
 }
 
+/* Tablet Responsive Styles (577px - 991px) */
+@media (min-width: 577px) and (max-width: 991px) {
+  nav {
+    padding: 0 1.5rem;
+  }
+
+  .navbar-collapse {
+    gap: 1.5rem;
+  }
+
+  .navbar-nav {
+    gap: 0.5rem;
+  }
+
+  .icons {
+    gap: 20px;
+
+    span {
+      display: none; /* Hide text labels on tablet */
+    }
+
+    i {
+      font-size: 1.2rem;
+    }
+  }
+
+  .custom-border {
+    width: 90%;
+  }
+}
+
+/* Desktop Responsive Styles (992px and above) */
+@media (min-width: 992px) {
+  nav {
+    padding: 0 2rem;
+  }
+
+  .navbar-collapse {
+    gap: 2rem;
+  }
+
+  .navbar-nav {
+    gap: 1rem;
+  }
+
+  .icons {
+    gap: 32px;
+
+    i {
+      font-size: 1.2rem;
+      transition: transform 0.3s ease;
+    }
+
+    i:hover {
+      transform: scale(1.1);
+      color: var(--active);
+    }
+  }
+
+  .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--active) !important;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--active);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+}
+
+/* Mobile Styles (existing code) */
 @media (max-width: 576px) {
   nav {
     .icons {
@@ -52,7 +137,6 @@ i {
       margin: 0;
     }
   }
-
 
   .navbar-nav {
     flex-direction: row;
@@ -67,5 +151,54 @@ i {
 
   .navbar-collapse {
     display: flex;
+  }
+}
+
+/* Tablet Portrait Mode (577px - 768px) */
+@media (min-width: 577px) and (max-width: 768px) and (orientation: portrait) {
+  nav {
+    padding: 0 1rem;
+    height: 4rem;
+  }
+
+  .navbar-collapse {
+    gap: 1rem;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-item {
+    margin-bottom: 0.25rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .icons {
+    gap: 15px;
+
+    span {
+      display: none; /* Hide text labels on tablet portrait */
+    }
+
+    i {
+      font-size: 1.1rem;
+    }
+  }
+
+  .custom-border {
+    width: 95%;
+  }
+
+  .brand img {
+    width: 2.5rem;
   }
 }
