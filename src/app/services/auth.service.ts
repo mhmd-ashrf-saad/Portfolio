@@ -8,9 +8,6 @@ import { delay, tap } from 'rxjs/operators';
 export class AuthService {
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);
   private readonly STORAGE_KEY = 'portfolio_auth';
-  
-  // For demo purposes, hardcoded credentials
-  // In production, use proper backend authentication
   private readonly ADMIN_USERNAME = 'admin';
   private readonly ADMIN_PASSWORD = 'admin123';
 
