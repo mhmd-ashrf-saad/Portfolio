@@ -22,14 +22,11 @@ footer {
     background: #98faec;
   }
 }
-.rights p,
-.policy {
+.rights {
   font-weight: 300;
-}
-.policy {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
+  margin: 0 0.5rem;
+  text-align: center;
+
 }
 .custom-border {
   border-bottom: 2px solid var(--greyline);

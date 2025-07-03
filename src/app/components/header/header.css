@@ -1,6 +1,6 @@
 .navbar-collapse {
   flex-grow: 0;
-  gap: 64px;
+  gap: 1rem;
 }
 .container-fluid {
   justify-content: flex-end;
