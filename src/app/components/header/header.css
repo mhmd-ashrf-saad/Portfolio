@@ -85,14 +85,17 @@ i {
 
   .navbar-nav {
     gap: 1rem;
+    font-size: 1.3rem;
+
   }
 
   .icons {
     gap: 32px;
 
     i {
-      font-size: 1.2rem;
+      font-size: 1.438rem;
       transition: transform 0.3s ease;
+
     }
 
     i:hover {
@@ -123,6 +126,10 @@ i {
 
   .nav-link:hover::after {
     width: 100%;
+  }
+  img{
+    width: 5rem;
+
   }
 }
 
@@ -201,4 +208,5 @@ i {
   .brand img {
     width: 2.5rem;
   }
+
 }
