@@ -13,7 +13,7 @@ export class Home {
 
   downloadCV() {
     const link = this.document.createElement('a');
-    link.href = 'assets/mohamed-ashraf-cv.pdf';
+    link.href = 'mohamed-ashraf-cv.pdf';
     link.download = 'Mohamed_Ashraf_CV.pdf';
     link.target = '_blank';
     this.document.body.appendChild(link);
