@@ -1,17 +1,19 @@
 <footer>
   <div class="custom-border"></div>
     <div class="media">
+      <a [href]="instagramLink?.link" target="_blank">
         <i class="bi bi-instagram"><span></span></i>
-        <i class="bi bi-linkedin"><span></span></i>
-        <i class="bi bi-github"><span></span></i>
+      </a>
+      <a [href]="linkedinLink?.link" target="_blank">
+      <i class="bi bi-linkedin"><span></span></i>
+      </a>
+      <a [href]="githubLink?.link" target="_blank">
+      <i class="bi bi-github"><span></span></i>
+      </a>
     </div>
-    <div class="footer-info">
-        <div class="rights">
-            <p>Copyright &copy; 2025 MohamedAshraf. All rights reserved.</p>
-        </div>
-        <div class="policy">
-            <p>Privacy Policy</p>
-            <p>Terms & Conditions</p>
-        </div>
+  <div class="footer-info">
+    <div class="rights">
+      <p>Copyright &copy; {{currentYear}} Mohamed Ashraf. All rights reserved.</p>
     </div>
+  </div>
 </footer>
