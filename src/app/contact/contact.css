@@ -70,7 +70,7 @@
   align-self: stretch;
   gap: 1rem;
   p {
-    color:#b3b3b3;
+    color: #b3b3b3;
     text-align: center;
     font-style: normal;
     font-weight: 400;
@@ -104,7 +104,6 @@
     background-color: var(--primary);
     border-bottom: 0.063rem solid var(--active);
     border-right: none;
-
   }
   #message {
     width: 18.375rem;
@@ -116,7 +115,6 @@
   align-items: flex-start;
   gap: 1.5rem;
   align-self: stretch;
-
 }
 .input-field {
   display: flex;
@@ -125,8 +123,8 @@
   gap: 1.5rem;
   flex: 1 0 0;
 }
-label{
-  color:var(--active);
+label {
+  color: var(--active);
 }
 textarea {
   background-color: var(--primary);
@@ -135,5 +133,210 @@ textarea {
   border-right: none;
   border-left: none;
   border-top: none;
+}
 
+/* Responsive styles for different devices and orientations */
+
+/* Tablet Portrait (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) and (orientation: portrait) {
+  .container {
+    padding: 3rem 2rem;
+  }
+
+  .module-title #title {
+    font-size: 3.5rem;
+  }
+
+  .info {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .info input {
+    width: 12rem;
+  }
+
+  #message {
+    width: 100% !important;
+  }
+
+  .personal-information {
+    gap: 2rem;
+  }
+
+  form .title span {
+    font-size: 1.7rem;
+  }
+
+  form button {
+    padding: 1rem 2.5rem;
+  }
+}
+
+/* Tablet Landscape (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) and (orientation: landscape) {
+  .container {
+    padding: 2rem;
+  }
+
+  .module-title {
+    gap: 0.5rem;
+  }
+
+  .module-title #title {
+    font-size: 3rem;
+  }
+
+  .info {
+    width: 90%;
+    max-width: 800px;
+    padding: 0 2rem;
+  }
+
+  .info input {
+    width: 16rem;
+  }
+
+  #message {
+    width: 100% !important;
+    min-height: 120px;
+  }
+
+  .personal-information {
+    gap: 3rem;
+  }
+
+  form .content {
+    gap: 3rem;
+  }
+
+  form {
+    gap: 3rem;
+  }
+}
+
+/* Desktop Portrait (992px and above) */
+@media (min-width: 992px) and (orientation: portrait) {
+  .container {
+    padding: 4rem 2rem;
+  }
+
+  .module-title #title {
+    font-size: 4.5rem;
+  }
+
+  .module-title p {
+    font-size: 1.3rem;
+  }
+
+  .info {
+    width: 80%;
+    max-width: 800px;
+  }
+
+  .info input {
+    width: 18rem;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+  }
+
+  #message {
+    width: 100% !important;
+    font-size: 1.1rem;
+    min-height: 150px;
+  }
+
+  .personal-information {
+    gap: 4rem;
+  }
+
+  form .title {
+    padding: 1.2rem 3rem;
+  }
+
+  form .title span {
+    font-size: 2rem;
+  }
+
+  form button {
+    padding: 1.2rem 3rem;
+    font-size: 1.3rem;
+  }
+
+  label {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop Landscape (992px and above) */
+@media (min-width: 992px) and (orientation: landscape) {
+  .container {
+    padding: 3rem;
+    gap: 5rem;
+  }
+
+  .module-title #title {
+    font-size: 4.5rem;
+  }
+
+  .module-title p {
+    font-size: 1.3rem;
+  }
+
+  .info {
+    width: 90%;
+    max-width: 1000px;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: flex-start;
+  }
+
+  .personal-information {
+    flex-direction: column;
+    width: 40%;
+  }
+
+  .message {
+    width: 60%;
+  }
+
+  .info input {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+  }
+
+  #message {
+    width: 100% !important;
+    font-size: 1.1rem;
+    min-height: 220px;
+  }
+
+  form .title {
+    padding: 1.2rem 3.5rem;
+  }
+
+  form .title span {
+    font-size: 2rem;
+  }
+
+  form button {
+    padding: 1.2rem 3.5rem;
+    font-size: 1.3rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  form button:hover {
+    transform: translateY(-3px);
+    background-color: #0ce9c9;
+  }
+
+  label {
+    font-size: 1.1rem;
+  }
+
+  form .content {
+    gap: 4rem;
+  }
 }
