@@ -24,5 +24,12 @@ export const routes: Routes = [{
     loadComponent: () => {
         return import('./projects/projects').then((m) => m.Projects)
     },
+
 },
+  {
+    path: 'skills',
+    loadComponent: () => {
+      return import('./skills/skills').then((m) => m.Skills)
+    },
+  },
 ];

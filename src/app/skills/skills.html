@@ -1,0 +1,138 @@
+<div class="skills-container">
+  <!-- Header Section -->
+  <div class="skills-header">
+    <div class="header-decoration">
+      <div class="teal-accent-line"></div>
+      <h1 class="skills-title">Skills & Expertise</h1>
+      <p class="skills-subtitle">My technical skills and certifications</p>
+    </div>
+  </div>
+
+  <!-- Technical Skills Section -->
+  <div class="skills-grid">
+
+    <!-- Programming Languages -->
+    <div class="skill-category">
+      <h3 class="category-title">
+        <span class="category-icon">💻</span>
+        Programming Languages
+      </h3>
+      <div class="skills-list">
+        @for (skill of getSkillsByCategory('languages'); track skill.name) {
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-percentage">{{ skill.level }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" [style.width]="getSkillLevelWidth(skill.level)"></div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Frameworks -->
+    <div class="skill-category">
+      <h3 class="category-title">
+        <span class="category-icon">🚀</span>
+        Frameworks & Libraries
+      </h3>
+      <div class="skills-list">
+        @for (skill of getSkillsByCategory('frameworks'); track skill.name) {
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-percentage">{{ skill.level }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" [style.width]="getSkillLevelWidth(skill.level)"></div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Databases -->
+    <div class="skill-category">
+      <h3 class="category-title">
+        <span class="category-icon">🗃️</span>
+        Databases
+      </h3>
+      <div class="skills-list">
+        @for (skill of getSkillsByCategory('databases'); track skill.name) {
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-percentage">{{ skill.level }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" [style.width]="getSkillLevelWidth(skill.level)"></div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Tools -->
+    <div class="skill-category">
+      <h3 class="category-title">
+        <span class="category-icon">🛠️</span>
+        Development Tools
+      </h3>
+      <div class="skills-list">
+        @for (skill of getSkillsByCategory('tools'); track skill.name) {
+          <div class="skill-item">
+            <div class="skill-header">
+              <span class="skill-name">{{ skill.name }}</span>
+              <span class="skill-percentage">{{ skill.level }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" [style.width]="getSkillLevelWidth(skill.level)"></div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Soft Skills Section -->
+  <div class="soft-skills-section">
+    <h3 class="section-title">Soft Skills</h3>
+    <div class="soft-skills-grid">
+      @for (skill of softSkills; track skill) {
+        <div class="soft-skill-item">
+          <div class="soft-skill-icon">✨</div>
+          <span class="soft-skill-name">{{ skill }}</span>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Certifications Section -->
+  <div class="certificates-section">
+    <h3 class="section-title">Certifications</h3>
+    <div class="certificates-grid">
+      @for (cert of certificates; track cert.name) {
+        <div class="certificate-item">
+          <div class="certificate-header">
+            <div class="certificate-icon">🏆</div>
+            <div class="certificate-info">
+              <h4 class="certificate-name">{{ cert.name }}</h4>
+              <p class="certificate-issuer">{{ cert.issuer }}</p>
+            </div>
+          </div>
+          @if (cert.credentialUrl) {
+            <a [href]="cert.credentialUrl"
+               class="credential-link"
+               target="_blank">
+              View Credential
+            </a>
+          }
+        </div>
+      }
+    </div>
+  </div>
+
+</div>
