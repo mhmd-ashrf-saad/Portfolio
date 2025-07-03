@@ -169,3 +169,101 @@ button {
   background: var(--dark);
   box-shadow: 0.125rem 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.25);
 }
+
+/* Responsive styles for tablets and desktops */
+@media screen and (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 6rem 2rem;
+  }
+
+  .left {
+    width: 22rem;
+    height: 40rem;
+  }
+
+  .profile-photo img {
+    width: 8rem;
+  }
+
+  .person-name {
+    font-size: 36px;
+  }
+
+  .right {
+    flex: 1;
+    align-items: flex-start;
+    padding-left: 2rem;
+  }
+
+  .info-right {
+    max-width: 80%;
+  }
+
+  .code span {
+    font-size: 2rem;
+  }
+
+  .paragraph .code span {
+    font-size: 1.2rem !important;
+  }
+
+  #cta {
+    font-size: 2.2rem;
+  }
+
+  .highlights {
+    width: 16rem;
+    align-self: flex-start;
+    margin-top: 2rem;
+  }
+}
+
+/* Desktop specific enhancements */
+@media screen and (min-width: 1200px) {
+  .content {
+    padding: 8rem 4rem;
+    gap: 4rem;
+  }
+
+  .left {
+    width: 24rem;
+    height: 42rem;
+  }
+
+  .profile-photo img {
+    width: 10rem;
+  }
+
+  .info-right {
+    max-width: 70%;
+  }
+
+  .code span {
+    font-size: 2.5rem;
+  }
+
+  .paragraph .code span {
+    font-size: 1.4rem !important;
+  }
+
+  #cta {
+    font-size: 2.5rem;
+  }
+
+  .highlights {
+    width: 18rem;
+    padding: 3.5rem 2.5rem;
+  }
+
+  .highlights .number {
+    font-size: 3.5rem;
+  }
+
+  .highlights .des {
+    font-size: 1.2rem;
+  }
+}
