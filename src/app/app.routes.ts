@@ -1,35 +1,20 @@
 import { Routes } from '@angular/router';
+import { Home } from './home/home';
+import { About } from './about/about';
+import { Projects } from './projects/projects';
+import { Skills } from './skills/skills';
+import { Contact } from './contact/contact';
+import { ADMIN_ROUTES } from './admin/admin.routes';
 
-export const routes: Routes = [{
-    path: '',
-    pathMatch: 'full',
-    loadComponent: () => {
-        return import('./home/home').then((m) => m.Home)
-    },
-},
-{
-    path: 'about',
-    loadComponent: () => {
-        return import('./about/about').then((m) => m.About)
-    },
-},
-{
-    path: 'contact',
-    loadComponent: () => {
-        return import('./contact/contact').then((m) => m.Contact)
-    },
-},
-{
-    path: 'projects',
-    loadComponent: () => {
-        return import('./projects/projects').then((m) => m.Projects)
-    },
-
-},
-  {
-    path: 'skills',
-    loadComponent: () => {
-      return import('./skills/skills').then((m) => m.Skills)
-    },
+export const routes: Routes = [
+  { path: '', component: Home },
+  { path: 'about', component: About },
+  { path: 'projects', component: Projects },
+  { path: 'skills', component: Skills },
+  { path: 'contact', component: Contact },
+  { 
+    path: 'admin', 
+    children: ADMIN_ROUTES
   },
+  { path: '**', redirectTo: '' }
 ];

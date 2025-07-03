@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ProjectService } from '../services/project.service';
 
 interface Project {
   id: number;
@@ -32,35 +33,23 @@ export class Projects implements OnInit, OnDestroy {
   private isDragging = false;
 
   // Projects data
-  projects: Project[] = [
-    {
-      id: 1,
-      title: "Tarabiza",
-      description: "Developed a furniture website, Designed and implemented responsive user interfaces using HTML, CSS, and JavaScript, Built robust server-side functionality using Django and integrated PostgreSQL for database\n" +
-        "management",
-      image: "projects/tarabiza.jpg",
-      technologies: ["Django", "JavaScript", "PostgreSQL", "Bootstrap"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/mohamednnj/ITI-projcet"
-    },
-    {
-      id: 2,
-      title: "U-learning",
-      description: "user-friendly educational platform, front-end implemented using HTML5, CSS3, JavaScript, TypeScript, Angular (for dynamic UI components, routing, and reactive forms),\n" +
-        "Bootstrap (for responsive design and styling), Angular Material (for modern UI elements)",
-      image: "projects/ulearning.png",
-      technologies: ["Angular", "Angular Material", "MongoDB","Bootstrap"],
-      liveUrl: "#",
-      githubUrl: "https://github.com/mhmd-ashrf-saad/U-LearningDotNetEntityFramework"
-    },
-  ];
+  projects: Project[] = [];
+
+  constructor(private projectService: ProjectService) {}
 
   ngOnInit() {
+    this.loadProjects();
     this.startAutoPlay();
   }
 
   ngOnDestroy() {
     this.stopAutoPlay();
+  }
+
+  loadProjects() {
+    this.projectService.getProjects().subscribe(projects => {
+      this.projects = projects;
+    });
   }
 
   startAutoPlay() {

@@ -1,0 +1,66 @@
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: white; /* Match the text color from root styles */
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  margin: 0;
+  color: var(--active); /* Use the active color variable for headings */
+}
+
+.logout-btn {
+  padding: 8px 16px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.logout-btn:hover {
+  background-color: #d32f2f;
+}
+
+.admin-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--greyline); /* Use the greyline variable for borders */
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 12px 24px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 16px;
+  font-weight: 500;
+  color: #999; /* Slightly lighter gray for inactive tabs */
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.tab-btn:hover {
+  color: white;
+}
+
+.tab-btn.active {
+  color: var(--active);
+  border-bottom-color: var(--active);
+}
+
+.admin-content {
+  background-color: var(--dark); /* Use the dark variable for content background */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Darker shadow for dark mode */
+  padding: 20px;
+}
