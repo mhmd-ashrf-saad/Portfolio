@@ -306,17 +306,86 @@
   transform: scale(1.2);
 }
 
-@media (max-width: 768px) {
+/* Add/modify these media queries */
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .inner-title {
+    font-size: 3.5rem;
+  }
+  
   .project-showcase {
     flex-direction: column;
   }
-
-  .nav-btn {
-    display: none;
-  }
-
+  
   .slide {
-    padding: 1rem;
+    padding: 2rem;
+  }
+  
+  .project-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .nav-btn {
+    display: flex;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .nav-btn.prev {
+    left: 10px;
+  }
+  
+  .nav-btn.next {
+    right: 10px;
+  }
+  
+  .code-side {
+    display: block;
+    margin-top: 2rem;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1200px) {
+  .container {
+    padding: 3rem;
+  }
+  
+  .inner-title {
+    font-size: 4.5rem;
+  }
+  
+  .project-showcase {
+    flex-direction: row;
+  }
+  
+  .project-image {
+    max-width: 50%;
+    height: auto;
+  }
+  
+  .code-side {
+    display: block;
+    flex: 1;
+  }
+  
+  .slide {
+    padding: 3rem;
+  }
+  
+  .nav-btn {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .nav-btn.prev {
+    left: -30px;
+  }
+  
+  .nav-btn.next {
+    right: -30px;
   }
 }
 

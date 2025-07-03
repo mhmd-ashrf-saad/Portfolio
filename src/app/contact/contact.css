@@ -137,3 +137,68 @@ textarea {
   border-top: none;
 
 }
+
+/* Add these media queries at the end of the file */
+
+/* Tablet Styles */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    padding: 3rem 2rem;
+  }
+  
+  .module-title #title {
+    font-size: 3.5rem;
+  }
+  
+  .info {
+    width: 100%;
+    max-width: 700px;
+  }
+  
+  .personal-information {
+    gap: 2rem;
+  }
+  
+  .info input {
+    width: 100%;
+  }
+  
+  .info #message {
+    width: 100%;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1200px) {
+  .container {
+    padding: 4rem 3rem;
+  }
+  
+  .module-title #title {
+    font-size: 4.5rem;
+  }
+  
+  .info {
+    width: 100%;
+    max-width: 900px;
+  }
+  
+  .personal-information {
+    gap: 3rem;
+  }
+  
+  .info input {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  
+  .info #message {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  
+  form button {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+  }
+}
