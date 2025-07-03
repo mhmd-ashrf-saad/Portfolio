@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-footer',
   imports: [],
@@ -7,5 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './footer.css'
 })
 export class Footer {
-
+links :string[]=[
+  "www.google.com","inaASLKa","ASDL","ASKDL","SAK"
+];
 }

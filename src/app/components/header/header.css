@@ -31,8 +31,7 @@ i {
 .custom-border {
   border-bottom: 2px solid var(--greyline);
   width: 80%;
-  margin: 0 auto;
-  margin-top: 0.3rem;
+  margin: 0.3rem auto 0;
 }
 @media (max-width: 576px) {
   nav {

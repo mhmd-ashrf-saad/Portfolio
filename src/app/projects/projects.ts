@@ -20,7 +20,7 @@ interface Project {
 export class Projects implements OnInit, OnDestroy {
   currentSlide = 0;
   private slideInterval: any;
-  private autoPlayDuration = 300000; // 5 minutes (you had 300000, which is very long)
+  private autoPlayDuration = 300000000; // 3 sec
   isAutoPlaying = true;
 
   // Touch/swipe properties

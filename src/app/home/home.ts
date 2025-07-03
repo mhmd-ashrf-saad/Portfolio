@@ -1,9 +1,13 @@
 import { Component, Inject } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import {RouterLink, RouterLinkActive} from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [
+    RouterLink,
+    RouterLinkActive
+  ],
   templateUrl: './home.html',
   styleUrl: './home.css'
 })
